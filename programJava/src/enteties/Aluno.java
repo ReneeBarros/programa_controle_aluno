@@ -2,10 +2,16 @@ package enteties;
 
 public class Aluno {
 
+    private final Double  Media  = 6.00;
     private String name;
     private Integer age;
     private String curse;
-    
+    private Double mediaAluno;
+    private Double notaAtividadeComplementar;
+    private Double notaTrabalhoGrupo;
+    private Double notaProva;
+
+
     public Aluno() {
     }
 
@@ -32,6 +38,12 @@ public class Aluno {
         return "Aluno [name=" + name + ", age=" + age + ", curse=" + curse + "]";
     }
 
-    
+    public void calculoMedia(){
+
+        mediaAluno = (notaAtividadeComplementar + notaTrabalhoGrupo + notaProva) /3;
+
+
+    }
+
     
 }
